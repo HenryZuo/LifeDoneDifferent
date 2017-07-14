@@ -1,0 +1,12 @@
+/* Landing Page CSS */
+body{
+    margin: 0 auto
+}
+h1{
+    color: red
+}
+#landing-logo{
+    margin: auto;
+    width: 70%;
+    padding: 15%;
+}
