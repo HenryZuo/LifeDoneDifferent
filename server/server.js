@@ -12,6 +12,10 @@ var app = express();
 app.engine('.hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
+// set up access to styles in public folder
+var path = require("path");
+app.use(express.static(path.join(__dirname, '../public')));
+
 // set up bodyParser
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
