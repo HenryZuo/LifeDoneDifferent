@@ -4,7 +4,7 @@ body{
     padding-bottom: 70px !important
 }
 h1{
-    color: red
+    color: #ff4c2f;
 }
 #landing-logo{
     margin: auto;
@@ -13,3 +13,32 @@ h1{
 }
 
 /* Navigation CSS */
+
+/* Podcast Main Page  */
+
+.podcast-card{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin: 20px;
+    border-radius: 8px;
+     background-color: #00acb7; 
+   
+    padding: 5px;
+    height: 440px;
+    width: 308px;
+
+
+}
+.podcast-card-components{
+    
+}
+.podcast-card-image{
+    margin-top: 8px;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #ffffff;
+    height: 400px;
+    width: 280px
+}
