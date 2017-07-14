@@ -12,8 +12,26 @@ router.get('/addPodcast', function (req, res) {
 });
 
 router.post('/addPodcast', function (req, res) {
-  console.log(req);
-  res.render('addPodcast');
+  var p = new Podcast({
+    guestName: req.body.guestName,
+    occupation: req.body.occupation,
+    imageURL: req.body.imageURL,
+    shortBio: req.body.shortBio,
+    longBio: req.body.longBio,
+    audioLink: req.body.audioLink,
+    showNotes: req.body.showNotes.split(','),
+    showLinks: req.body.showLinks.split(','),
+    tags: req.body.tags.split(',')
+  });
+  p.save(function(err){
+      if(err){
+        res.send(err);
+      } else {
+        res.render('addPodcast', {
+          success: true
+        });
+      };
+    });
 });
 
 module.exports = router;

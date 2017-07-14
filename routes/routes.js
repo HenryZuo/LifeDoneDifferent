@@ -22,9 +22,15 @@ router.get('/about', function (req, res) {
 });
 
 router.get('/podcasts', function (req, res) {
-    res.render('podcasts', {
-      words: "Welcome to Podcasts!!"
-    });
+  Podcast.find().exec(function(err, pArr){
+    if(err){
+      res.send(err);
+    } else {
+      res.render('podcasts', {
+        pArr: pArr
+      });
+    }
+  })
 });
 
 router.get('/podcasts/:podcastName', function (req, res) {

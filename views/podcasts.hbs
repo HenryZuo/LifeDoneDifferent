@@ -1,1 +1,10 @@
-<h1> {{words}} </h1>
+<div class="container-fluid" style="width:50%; padding-bottom:2em; margin-top:2em;">
+  <h2> below are all podcasts </h2>
+  {{#each pArr}}
+  <div class="container" style="border:1px solid #cecece; margin: 2em;">
+    {{#each this._doc}}
+      <strong> {{@key}}: </strong> {{this}} <br/>
+    {{/each}}
+  </div>
+  {{/each}}
+</div>
