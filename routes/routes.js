@@ -36,79 +36,62 @@ router.get('/podcasts', function (req, res) {
 router.get('/podcasts/:podcastName', function (req, res) {
   var paramString = req.params.podcastName;
   var paramName = paramString.split('.').join(' ');
-  Podcast.findOne({guestName: paramName}).exec(function(err, p){
-    if(err){
-      res.send(err);
-    } else {
-      res.render('onePodcast', {
-        p: p._doc
-      });
-    }
+  var p;
+
+  Podcast.findOne({guestName: paramName}).exec()
+  .then(function(pcast){
+    p = pcast;
+    return Comment.find({podcastID: p._id}).exec()})
+  .then(function(cArr){
+    res.render('onePodcast', {
+      p: p._doc,
+      cArr: cArr
+    });
   });
 });
 
 router.post('/podcasts/:podcastName', function (req, res) {
   var paramString = req.params.podcastName;
   var paramName = paramString.split('.').join(' ');
-  Podcast.findOne({guestName: paramName}).exec(function(err, p){
-    if(err){res.send(err);} else {
-      User.findOne({email: req.body.email}).exec(function(err, u){
-        if(err){res.send(err);}
-        else {
-          if(u===null){
-            var u = new User({
-              email: req.body.email,
-              name: req.body.name});
-            u.save().exec(function(err){
-              if(err){res.send(err)}
-              else {
-                var c = new Comment({
-                  userID: u._id,
-                  content: req.body.content,
-                  time: new Date(),
-                  replies: []
-                });
-                console.log("what is c??");
-                c.save().exec(function(err){
-                  if(err){res.send(err)}
-                  else {
-                    Podcast.update({ _id: p._id }, { $push: { comments: commentID } })
-                    .exec(function(err, p){
-                      if(err){res.send(err);
-                      } else {res.redirect('/podcasts/' + req.body.params.podcastName)};
-                    });
-                  }
-                });
-              };
-            });
-          } else {
-            var c = new Comment({
-              userID: u._id,
-              content: req.body.content,
-              time: new Date(),
-              replies: []
-            });
-            console.log("________________________________________________");
-            console.log("________________________________________________");
-            console.log("________________________________________________");
-            c.save(function(err){
-              if(err){
-              console.log(err);}
-              res.send("save succeeded!");
-            })
-            // .exec(function(err){
-            //   if(err){res.send(err)}
-            //   else {
-            //     Podcast.update({ _id: p._id }, { $push: { comments: commentID } })
-            //     .exec(function(err, p){
-            //       if(err){res.send(err);
-            //       } else {res.redirect('/podcasts/' + req.body.params.podcastName)};
-            //     });
-            //   }
-            // });
-          };
-        };
+  var p;
+
+  Podcast.findOne({guestName: paramName}).exec()
+  .then(function(pcast){
+    p = pcast;
+    return User.findOne({email: req.body.email})
+  })
+  .then(function(u){
+    if(u===null){
+      var u = new User({
+        email: req.body.email,
+        name: req.body.name});
+    u.save()
+    .then(function(u){
+      var c = new Comment({
+        podcastID: p._id,
+        userID: u._id,
+        content: req.body.content,
+        time: new Date(),
+        replies: []
       });
+      return c.save();
+    })
+    .then(function(c){
+      res.redirect('/podcasts/' + req.params.podcastName);
+    })
+    .catch(function(e){console.log("ERROR1: ", e);});
+    } else {
+      var c = new Comment({
+        podcastID: p._id,
+        userID: u._id,
+        content: req.body.content,
+        time: new Date()
+      });
+      c.save()
+      .then(function(c){
+        res.redirect('/podcasts/' + req.params.podcastName);
+      })
+      .catch(function(e){console.log("ERROR2: ", e);});
     };
   });
 });
