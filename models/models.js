@@ -17,21 +17,20 @@ var podcastSchema = new Schema({
   showNotes: { type: Array, required: true },
   showLinks: { type: Array, required: true },
   audioLink: { type: String, required: true },
-  tags: { type: Array, required: true }
+  tags: { type: Array, required: true },
+  comments: { type: Array, required: true }
 });
 
 var commentSchema = new Schema({
-  podcastID: { type: String, required: true },
-  guestID: { type: String, required: true },
+  userID: { type: String, required: true },
   content: { type: String, required: true },
   time: { type: Date, required: true },
-  replies: { type: Array, required: true }
+  replies: { type: Array }
 });
 
 var userSchema = new Schema({
   email: { type: String, required: true },
-  fname: { type: String, required: true },
-  lname: { type: String, required: true }
+  name: { type: String, required: true }
 });
 
 module.exports = {

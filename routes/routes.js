@@ -30,19 +30,88 @@ router.get('/podcasts', function (req, res) {
         pArr: pArr
       });
     }
-  })
+  });
 });
 
 router.get('/podcasts/:podcastName', function (req, res) {
-    res.render('podcasts', {
-      words: "Welcome to Podcasts!!"
-    });
+  var paramString = req.params.podcastName;
+  var paramName = paramString.split('.').join(' ');
+  Podcast.findOne({guestName: paramName}).exec(function(err, p){
+    if(err){
+      res.send(err);
+    } else {
+      res.render('onePodcast', {
+        p: p._doc
+      });
+    }
+  });
 });
 
 router.post('/podcasts/:podcastName', function (req, res) {
-  res.render('podcasts', {
-    words: "Welcome to Podcasts!!"
+  var paramString = req.params.podcastName;
+  var paramName = paramString.split('.').join(' ');
+  Podcast.findOne({guestName: paramName}).exec(function(err, p){
+    if(err){res.send(err);} else {
+      User.findOne({email: req.body.email}).exec(function(err, u){
+        if(err){res.send(err);}
+        else {
+          if(u===null){
+            var u = new User({
+              email: req.body.email,
+              name: req.body.name});
+            u.save().exec(function(err){
+              if(err){res.send(err)}
+              else {
+                var c = new Comment({
+                  userID: u._id,
+                  content: req.body.content,
+                  time: new Date(),
+                  replies: []
+                });
+                console.log("what is c??");
+                c.save().exec(function(err){
+                  if(err){res.send(err)}
+                  else {
+                    Podcast.update({ _id: p._id }, { $push: { comments: commentID } })
+                    .exec(function(err, p){
+                      if(err){res.send(err);
+                      } else {res.redirect('/podcasts/' + req.body.params.podcastName)};
+                    });
+                  }
+                });
+              };
+            });
+          } else {
+            var c = new Comment({
+              userID: u._id,
+              content: req.body.content,
+              time: new Date(),
+              replies: []
+            });
+            console.log("________________________________________________");
+            console.log("________________________________________________");
+            console.log("________________________________________________");
+            c.save(function(err){
+              if(err){
+              console.log(err);}
+              res.send("save succeeded!");
+            })
+            // .exec(function(err){
+            //   if(err){res.send(err)}
+            //   else {
+            //     Podcast.update({ _id: p._id }, { $push: { comments: commentID } })
+            //     .exec(function(err, p){
+            //       if(err){res.send(err);
+            //       } else {res.redirect('/podcasts/' + req.body.params.podcastName)};
+            //     });
+            //   }
+            // });
+          };
+        };
+      });
+    };
   });
 });
+
 
 module.exports = router;
