@@ -33,6 +33,8 @@
 {{!-- START HANDLEBARS ELEMENTS!! --}}
 {{#each pArr}}
 <div class="podcast-card-wrapper col-sm-4">
+    {{!-- <a href="/podcast/{{this.guestName}}"> --}}
+    <a href="/podcast/{{id}}">
     <div class="podcast-card-components">
         <div class="podcast-card">
 
@@ -44,11 +46,16 @@
             <!-- </div> -->
         </div>
    </div>
-    <h3>{{this.guestName}}</h3>
+   </a>
+    <h2>{{this.guestName}}</h2>
     <h3>{{this.occupation}}</h3>
     <p>{{this.shortBio}}</p>
    
-  </div>
+ <audio controls preload="none" class="small">
+ <source type="audio/mp3" src="{{this.audioLink}}"/>
+   <source src="vincent.ogg" type="audio/ogg"/> 
+</audio>  
+  </div> 
 
 {{/each}}
 {{!-- END HANDLEBARS ELEMENTS!! --}}

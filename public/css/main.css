@@ -1,15 +1,23 @@
 /* Landing Page CSS */
 body{
     margin: 0 auto;
-    padding-bottom: 70px !important
+    /* padding-bottom: 70px !important */
 }
-h1{
+p{
+    text-align: justify
+}
+h1, h2{
     color: #ff4c2f;
+    text-align: center;
+}
+h3, h4{
+ color:#00acb7;  
+ text-align: center; 
 }
 #landing-logo{
     margin: auto;
     width: 70%;
-    padding: 15%;
+    /* padding: 15%; */
 }
 
 /* Navigation CSS */
@@ -84,11 +92,18 @@ margin-top: 8px;
     border-color: #ffffff;
     /* flex: 1; */
 }
-
-/* AUDIO PLAYER */
-audio{
+.large{
     width: 400px;
     background-color: none;
     /* opacity: 0.5; */
     /* color: #ffffff; */
 }
+
+/* AUDIO PLAYER */
+.small{
+    width: 380px;
+    background-color: none;
+    /* opacity: 0.5; */
+    /* color: #ffffff; */
+}
+

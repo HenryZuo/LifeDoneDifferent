@@ -22,12 +22,14 @@ router.get('/about', function (req, res) {
 });
 
 router.get('/podcasts', function (req, res) {
+  
   Podcast.find().exec(function(err, pArr){
     if(err){
       res.send(err);
     } else {
       res.render('podcasts', {
-        pArr: pArr
+        pArr: pArr,
+      
       });
     }
   });

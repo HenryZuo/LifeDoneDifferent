@@ -29,7 +29,7 @@
     </nav>
 
 
-<h1>Episode page</h1>
+{{!-- <h1>Episode page</h1> --}}
 <div class="container-fluid">
   {{!-- PODCAST CONTENT --}}
   <div class="row">
@@ -43,8 +43,14 @@
       <!-- </div> -->
     </div>
     <div>
-      <h3>{{p.guestName}}</h3>
-      <h3>{{p.occupation}}</h3>
+      <audio controls preload="none" class="large">
+ <source type="audio/mp3" src="{{p.audioLink}}"/>
+   <source src="vincent.ogg" type="audio/ogg"/> 
+</audio>
+   
+  </div>
+      <h1>{{p.guestName}}</h1>
+      <h2>{{p.occupation}}</h2>
       <p>{{p.longBio}}</p>
     </div>
   </div>
