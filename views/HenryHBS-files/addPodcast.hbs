@@ -1,0 +1,47 @@
+<div class="container-fluid" style="width:50%; border:1px solid #cecece; padding-bottom:2em; margin-top:2em;">
+  <h2>Add Podcast with this form!</h2>
+  {{#if success}}
+  <div class="alert alert-success">
+    <strong>Success! Podcast added!</strong>
+  </div>
+  {{/if}}
+  <form method="post">
+    <div class="form-group">
+      <label>Guest Name: </label>
+      <input name="guestName" type="text" class="form-control" >
+    </div>
+    <div class="form-group">
+      <label>Occupation: </label>
+      <input name="occupation" type="text" class="form-control" >
+    </div>
+    <div class="form-group">
+      <label>Image URL: </label>
+      <input name="imageURL" type="text" class="form-control" >
+    </div>
+    <div class="form-group">
+      <label>Short Bio: </label>
+      <input name="shortBio" type="text" class="form-control" >
+    </div>
+    <div class="form-group">
+      <label>Long Bio: </label>
+      <textarea name="longBio" class="form-control" rows="8" ></textarea>
+    </div>
+    <div class="form-group">
+      <label>Audio Link: </label>
+      <input name="audioLink" type="text" class="form-control" >
+    </div>
+    <div class="form-group">
+      <label>Show Notes: </label>
+      <input name="showNotes" type="text" class="form-control" placeholder="separate bullets with comma">
+    </div>
+    <div class="form-group">
+      <label>Show Links: </label>
+      <input name="showLinks" type="text" class="form-control" placeholder="separate bullets with comma">
+    </div>
+    <div class="form-group">
+      <label>Tags: </label>
+      <input name="tags" type="text" class="form-control" placeholder="separate bullets with comma">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

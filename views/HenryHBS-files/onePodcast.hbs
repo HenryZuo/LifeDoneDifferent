@@ -1,0 +1,38 @@
+<div class="container-fluid" style="width:50%; padding-bottom:2em; margin-top:2em;">
+  <h2> Below is one podcast </h2>
+  <div class="container" style="width:100%; border:1px solid #cecece; padding: 1em;">
+    {{#each p}}
+      <strong> {{@key}}: </strong> {{this}} <br/>
+    {{/each}}
+  </div>
+</div>
+
+<div class="container-fluid" style="width:50%; padding-bottom:2em; margin-top:2em;">
+  <h2> Below are all comments for this one podcast </h2>
+  <div class="container" style="width:100%; border:1px solid #cecece; padding: 1em;">
+    {{#each cArr}}
+      {{#each this._doc}}
+        <strong> {{@key}}: </strong> {{this}} <br/>
+      {{/each}}
+    {{/each}}
+  </div>
+</div>
+
+<div class="container-fluid" style="width:50%; padding-bottom:2em; margin-top:2em;">
+  <h2>Add Comment Here: </h2>
+  <form method="post">
+    <div class="form-group">
+      <label>Name: </label>
+      <input name="name" type="text" class="form-control" >
+    </div>
+    <div class="form-group">
+      <label>Email: </label>
+      <input name="email" type="email" class="form-control" >
+    </div>
+    <div class="form-group">
+      <label>Comment: </label>
+      <textarea name="content" class="form-control" rows="5" ></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

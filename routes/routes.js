@@ -71,6 +71,7 @@ router.post('/podcasts/:podcastName', function (req, res) {
         podcastID: p._id,
         userID: u._id,
         content: req.body.content,
+        name: req.body.name,
         time: new Date(),
         replies: []
       });
@@ -85,7 +86,8 @@ router.post('/podcasts/:podcastName', function (req, res) {
         podcastID: p._id,
         userID: u._id,
         content: req.body.content,
-        time: new Date()
+        time: new Date(),
+        name: req.body.name,
       });
       c.save()
       .then(function(c){

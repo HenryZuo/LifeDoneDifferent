@@ -24,7 +24,8 @@ var commentSchema = new Schema({
   podcastID: { type: String, required: true },
   userID: { type: String, required: true },
   content: { type: String, required: true },
-  time: { type: Date, required: true }
+  time: { type: Date, required: true },
+  name: { type: String, required: true }
 });
 
 var userSchema = new Schema({

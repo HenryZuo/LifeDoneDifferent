@@ -1,38 +1,82 @@
-<div class="container-fluid" style="width:50%; padding-bottom:2em; margin-top:2em;">
-  <h2> Below is one podcast </h2>
-  <div class="container" style="width:100%; border:1px solid #cecece; padding: 1em;">
-    {{#each p}}
-      <strong> {{@key}}: </strong> {{this}} <br/>
-    {{/each}}
-  </div>
-</div>
+   <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <img src="/imgs/banner-header-pastel.png" width="200px" alt="">
+                </a>
+            </div>
 
-<div class="container-fluid" style="width:50%; padding-bottom:2em; margin-top:2em;">
-  <h2> Below are all comments for this one podcast </h2>
-  <div class="container" style="width:100%; border:1px solid #cecece; padding: 1em;">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="/podcasts"> Podcasts</a></li>
+                    <li><a href="/about">About</a></li>
+                    {{!-- <li><a href="/contact">Contact</a></li> --}}
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+<h1>Episode page</h1>
+<div class="container-fluid">
+  {{!-- PODCAST CONTENT --}}
+  <div class="row">
+    <div class="episode-card col-sm-4">
+
+      <img src="{{p.imageURL}}" alt="" class="episode-card-image col-sm-12">
+      <!-- <div class="podcast-card-components"> -->
+      <!-- <div class="podcast-card-headline">
+
+            </div> -->
+      <!-- </div> -->
+    </div>
+    <div>
+      <h3>{{p.guestName}}</h3>
+      <h3>{{p.occupation}}</h3>
+      <p>{{p.longBio}}</p>
+    </div>
+  </div>
+
+  {{!-- ALL WRITTEN COMMENTS --}}
+
+  <div class="comments-made">
+    <h2>Comments:</h2>
     {{#each cArr}}
-      {{#each this._doc}}
-        <strong> {{@key}}: </strong> {{this}} <br/>
-      {{/each}}
+    <h4>{{this.name}}</h4>
+    <h5>{{this.time}}</h5>
+    <p>{{this.content}}</p>
     {{/each}}
   </div>
-</div>
 
-<div class="container-fluid" style="width:50%; padding-bottom:2em; margin-top:2em;">
-  <h2>Add Comment Here: </h2>
-  <form method="post">
-    <div class="form-group">
-      <label>Name: </label>
-      <input name="name" type="text" class="form-control" >
-    </div>
-    <div class="form-group">
-      <label>Email: </label>
-      <input name="email" type="email" class="form-control" >
-    </div>
-    <div class="form-group">
-      <label>Comment: </label>
-      <textarea name="content" class="form-control" rows="5" ></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+  {{!-- COMMENT FORM - POST REQUEST --}}
+  <div class="container-fluid" style="width:50%; padding-bottom:2em; margin-top:2em;">
+    <h2>Add Comment Here: </h2>
+    <form method="post">
+      <div class="form-group">
+        <label>Name: </label>
+        <input name="name" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Email: </label>
+        <input name="email" type="email" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Comment: </label>
+        <textarea name="content" class="form-control" rows="5"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
 </div>

@@ -4,7 +4,7 @@ body{
     padding-bottom: 70px !important
 }
 h1{
-    color: red
+    color: #ff4c2f;
 }
 #landing-logo{
     margin: auto;
@@ -13,3 +13,82 @@ h1{
 }
 
 /* Navigation CSS */
+
+/* Podcast Main Page  */
+
+.podcast-card{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin: 20px;
+    border-radius: 8px;
+     background-color: #00acb7; 
+   
+    padding: 5px;
+    height: 440px;
+    width: 308px;
+
+
+}
+.podcast-card-wrapper{
+
+}
+.podcast-card-components{
+   display: flex; 
+    /* justify-content: center;
+   align-items: flex-end;  
+   box-sizing: border-box; */
+   height: 440px;
+    width: 308px;
+}
+.podcast-card-image{
+    margin-top: 8px;
+    justify-content: center;
+   align-items: center;  
+   box-sizing: border-box;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #ffffff;
+    height: 400px;
+    width: 280px;
+    
+}
+ .podcast-card-headline{
+    width: 280px;
+    height: 40px;
+    background-color: #ffffff;
+    justify-content: center;
+   align-items: flex-end;  
+   box-sizing: border-box;
+} 
+
+/* Each Episode Page  */
+
+ .episode-card{
+    margin: 20px;
+    border-radius: 8px;
+     background-color: #00acb7; 
+   /* width: 40%; */
+    padding: 5px;
+    
+} 
+.episode-card-image{
+margin-top: 8px;
+    justify-content: center;
+   align-items: center;  
+   box-sizing: border-box;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #ffffff;
+    /* flex: 1; */
+}
+
+/* AUDIO PLAYER */
+audio{
+    width: 400px;
+    background-color: none;
+    /* opacity: 0.5; */
+    /* color: #ffffff; */
+}

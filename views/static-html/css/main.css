@@ -87,7 +87,8 @@ margin-top: 8px;
 
 /* AUDIO PLAYER */
 audio{
-    background-color: red;
     width: 400px;
-    color: red;
+    background-color: none;
+    /* opacity: 0.5; */
+    /* color: #ffffff; */
 }
