@@ -21,7 +21,8 @@ router.post('/addPodcast', function (req, res) {
     audioLink: req.body.audioLink,
     showNotes: req.body.showNotes.split(','),
     showLinks: req.body.showLinks.split(','),
-    tags: req.body.tags.split(',')
+    tags: req.body.tags.split(','),
+    comments: []
   });
   p.save(function(err){
       if(err){
