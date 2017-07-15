@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Life Done Different</title>
+     <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="css/main.css">
+     <!-- <link rel="stylesheet" href="css/mediaelementplayer.min.css" />  -->
+  
+  </head>
+  <body>
+<!-- Start {{{body}}} insert for hanlebars - above is part of the main.hbs file -->
+  
+<!-- <h1>Audio Player</h1>
+<audio width="320" height="240" class="mejs__player" id = "mediaplayer">
+	<source type="audio/mp3" src="http://traffic.libsyn.com/lifedonedifferent/001_.mp3" />
+</audio> -->
+<h1>Audio Player 2</h2>
+<audio controls preload="none">
+  <source type="audio/mp3" src="http://traffic.libsyn.com/lifedonedifferent/001_.mp3"/>
+   <source src="vincent.ogg" type="audio/ogg"/> 
+</audio>
+<h1>Audio Player 3</h2>
+<audio controls>
+  <source type="audio/mp3" src="http://traffic.libsyn.com/lifedonedifferent/001_.mp3"/>
+  <!-- <source src="vincent.ogg" type="audio/ogg"/> -->
+  <object type="application/x-shockwave-flash" data="media/OriginalMusicPlayer.swf" width="225" height="86"> 
+    <param name="movie" value="media/OriginalMusicPlayer.swf"/>
+    <param name="FlashVars" value="mediaPath=vincent.mp3" /> 
+  </object> 
+  <a href="vincent.mp3">Download this lovely song and wish you all the best!</a>
+</audio>
+<!-- Start {{{body}}} insert for hanlebars - above is part of the main.hbs file -->
+ <script src="js/jquery.min.js"></script>  
+<script src="js/bootstrap.min.js"></script>   
+<!-- <script src="js/mediaelement-and-player.min.js"></script>  -->
+
+  </body>
+</html>

@@ -84,3 +84,10 @@ margin-top: 8px;
     border-color: #ffffff;
     /* flex: 1; */
 }
+
+/* AUDIO PLAYER */
+audio{
+    background-color: red;
+    width: 400px;
+    color: red;
+}
