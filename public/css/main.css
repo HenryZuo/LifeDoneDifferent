@@ -14,11 +14,11 @@ h3, h4{
  color:#00acb7;  
  text-align: center; 
 }
-#landing-logo{
+ #landing-logo{
     margin: auto;
-    width: 70%;
+    width: 100%;
     /* padding: 15%; */
-}
+} 
 
 /* Navigation CSS */
 
@@ -93,7 +93,7 @@ margin-top: 8px;
     /* flex: 1; */
 }
 .large{
-    width: 400px;
+    /* width: 400px; */
     background-color: none;
     /* opacity: 0.5; */
     /* color: #ffffff; */
