@@ -22,25 +22,22 @@ router.get('/about', function (req, res) {
 });
 
 router.get('/podcasts', function (req, res) {
-  
+
   Podcast.find().exec(function(err, pArr){
     if(err){
       res.send(err);
     } else {
       res.render('podcasts', {
         pArr: pArr,
-      
+
       });
     }
   });
 });
 
-router.get('/podcasts/:podcastName', function (req, res) {
-  var paramString = req.params.podcastName;
-  var paramName = paramString.split('.').join(' ');
+router.get('/podcasts/:podcastID', function (req, res) {
   var p;
-
-  Podcast.findOne({guestName: paramName}).exec()
+  Podcast.findOne({_id: req.params.podcastID}).exec()
   .then(function(pcast){
     p = pcast;
     return Comment.find({podcastID: p._id}).exec()})

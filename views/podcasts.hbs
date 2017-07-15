@@ -34,7 +34,7 @@
 {{#each pArr}}
 <div class="podcast-card-wrapper col-sm-4">
     {{!-- <a href="/podcast/{{this.guestName}}"> --}}
-    <a href="/podcast/{{id}}">
+    <a href="/podcasts/{{id}}">
     <div class="podcast-card-components">
         <div class="podcast-card">
 
@@ -50,12 +50,12 @@
     <h2>{{this.guestName}}</h2>
     <h3>{{this.occupation}}</h3>
     <p>{{this.shortBio}}</p>
-   
+
  <audio controls preload="none" class="small">
  <source type="audio/mp3" src="{{this.audioLink}}"/>
-   <source src="vincent.ogg" type="audio/ogg"/> 
-</audio>  
-  </div> 
+   <source src="vincent.ogg" type="audio/ogg"/>
+</audio>
+  </div>
 
 {{/each}}
 {{!-- END HANDLEBARS ELEMENTS!! --}}
