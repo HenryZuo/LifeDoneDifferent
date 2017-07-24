@@ -49,12 +49,10 @@ router.get('/podcasts/:podcastID', function (req, res) {
   });
 });
 
-router.post('/podcasts/:podcastName', function (req, res) {
-  var paramString = req.params.podcastName;
-  var paramName = paramString.split('.').join(' ');
+router.post('/podcasts/:podcastID', function (req, res) {
   var p;
 
-  Podcast.findOne({guestName: paramName}).exec()
+  Podcast.findOne({_id: req.params.podcastID}).exec()
   .then(function(pcast){
     p = pcast;
     return User.findOne({email: req.body.email})
@@ -77,7 +75,7 @@ router.post('/podcasts/:podcastName', function (req, res) {
       return c.save();
     })
     .then(function(c){
-      res.redirect('/podcasts/' + req.params.podcastName);
+      res.redirect('/podcasts/' + req.params.podcastID);
     })
     .catch(function(e){console.log("ERROR1: ", e);});
     } else {
@@ -90,7 +88,7 @@ router.post('/podcasts/:podcastName', function (req, res) {
       });
       c.save()
       .then(function(c){
-        res.redirect('/podcasts/' + req.params.podcastName);
+        res.redirect('/podcasts/' + req.params.podcastID);
       })
       .catch(function(e){console.log("ERROR2: ", e);});
     };
