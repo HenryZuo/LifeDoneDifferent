@@ -29,36 +29,51 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-<div class="all-podcasts container-fluid">
+<div class="container">
+        <div class="row justify-content-center">
 {{!-- START HANDLEBARS ELEMENTS!! --}}
 {{#each pArr}}
-<div class="podcast-card-wrapper col-sm-4">
-    {{!-- <a href="/podcast/{{this.guestName}}"> --}}
-    <a href="/podcasts/{{id}}">
-    <div class="podcast-card-components">
-        <div class="podcast-card">
 
-            <img src="{{this.imageURL}}" alt="" class="podcast-card-image">
-            <!-- <div class="podcast-card-components"> -->
-            <!-- <div class="podcast-card-headline">
+{{!-- NEW CODE STARTS --}}
 
-            </div> -->
-            <!-- </div> -->
+           
+        
+        <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+            <div class="blue-border">
+                <div class="podcast-card">
+                    <a href="/podcasts/{{id}}">
+                        <div class="podcast-image-writing">
+                            <div class="podcast-card-image">
+
+                                <img src="{{this.imageURL}}" alt="" class="podcast-card-image">
+
+                            </div>
+                            <div class="written-content">
+                                <h3>{{this.guestName}}</h3>
+                                <h4>{{this.occupation}}</h4>
+                                <p>{{this.shortBio}}</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="audio-clip">
+                        <audio controls preload="none" class="small">
+                            <source type="audio/mp3" src="{{this.audioLink}}"/>
+                            {{!-- <source src="vincent.ogg" type="audio/ogg" /> --}}
+                        </audio>
+                    </div>
+
+
+
+                </div>
+            </div>
         </div>
-   </div>
-   </a>
-    <h2>{{this.guestName}}</h2>
-    <h3>{{this.occupation}}</h3>
-    <p>{{this.shortBio}}</p>
 
- <audio controls preload="none" class="small">
- <source type="audio/mp3" src="{{this.audioLink}}"/>
-   <source src="vincent.ogg" type="audio/ogg"/>
-</audio>
-  </div>
 
+       
+    {{!-- NEW CODE ENDS --}}
 {{/each}}
 {{!-- END HANDLEBARS ELEMENTS!! --}}
+ </div>
 </div>
 
 
