@@ -3,7 +3,7 @@ body{
     margin: 0 auto;
     padding-bottom: 70px !important
 }
-h1{
+h4{
     color: #ff4c2f !important
 }
 
@@ -15,84 +15,217 @@ h3{
     width: 70%;
     padding: 15%;
 }
+ /* .container{
+    background-color: blue;
+}  */
 
 /* Navigation CSS */
 
 /* Podcast Main Page  */
 
-.podcast-card{
+.blue-border{
+    background-color:#00acb7;
     display: flex;
+    align-items: center;
     justify-content: center;
-    /* align-items: center; */
-    margin: 20px;
+     height: 480px;
+    padding-bottom: 5px;
+    width: 308px;
     border-radius: 8px;
-     background-color: #00acb7; 
-   
-    padding: 5px;
-    height: 440px;
-    width: 308px;
-
+    margin: 3% auto;  
 
 }
-.podcast-card-wrapper{
-
+.podcast-card{
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    
+    height: 460px;
+    width: 290px;
+    border-radius: 8px;
+    background-color: white; 
 }
-.podcast-card-components{
-   display: flex; 
-    /* justify-content: center;
-   align-items: flex-end;  
-   box-sizing: border-box; */
-   height: 440px;
-    width: 308px;
+.podcast-card p{
+    /* color: #606161; */
+    color:#666666;
+}
+.podcast-card a{
+    text-decoration: none;
+}
+
+.podcast-image-writing{
+    display: flex;
+    flex-direction: column; 
+    height: 400px;
+    width: 280px; 
 }
 .podcast-card-image{
-    margin-top: 8px;
-    justify-content: center;
-   align-items: center;  
-   box-sizing: border-box;
-    border-radius: 8px;
+    position: absolute;
+}
+
+.podcast-card-image img{
+    border-radius: 12px;
     border-style: solid;
     border-width: 5px;
     border-color: #ffffff;
-    height: 400px;
-    width: 280px;
-    
+     height: 400px; 
+     width: 280px; 
+    /* width: 30%; */
 }
- .podcast-card-headline{
+
+.written-content{
+    align-self: flex-start;
+    background-color: white; 
+     opacity: 0.8; 
+    overflow: hidden;
+    border-radius: 8px;
+    height: 80px;
+    width: 280px;
+    padding: 10px;
+}
+
+.written-content p{
+    text-align: justify;
+}
+.written-content h3{
+    padding-top: 5px;
+    margin: 0;
+    text-align: center;
+}
+.written-content h4{
+    text-align: center;
+}
+
+.audio-clip{
+     margin-top: 10px; 
+    /* padding-top: 15px; */
+    background-color: white;
     width: 280px;
     height: 40px;
-    background-color: #ffffff;
-    justify-content: center;
-   align-items: flex-end;  
-   box-sizing: border-box;
+    border-radius: 8px;
+    z-index: 12;
+}
+.small{
+    width: 270px;
+    border-radius: 8px;
+    margin: 0 0 0 5px; 
 } 
+
 
 /* Each Episode Page  */
 
  .episode-card{
     margin: 20px;
     border-radius: 8px;
-     background-color: #00acb7; 
-   /* width: 40%; */
+    background-color: #00acb7; 
     padding: 5px;
     
 } 
 .episode-card-image{
-margin-top: 8px;
+    margin-top: 8px;
     justify-content: center;
-   align-items: center;  
-   box-sizing: border-box;
+    align-items: center;  
+    box-sizing: border-box;
     border-radius: 8px;
     border-style: solid;
     border-width: 5px;
     border-color: #ffffff;
-    /* flex: 1; */
 }
 
 /* AUDIO PLAYER */
 audio{
     width: 400px;
     background-color: none;
-    /* opacity: 0.5; */
-    /* color: #ffffff; */
+}
+
+/* ANIMATION */
+.grower{
+    animation-name: grower;
+    animation-duration: .5s;
+    animation-fill-mode: forwards 
+}
+.shrink{
+    animation-name: shrink;
+    animation-duration: .5s;
+    animation-fill-mode: forwards  
+}
+@keyframes grower {
+    0% {height: 75px;} 
+    100%{height: 400px;}
+}
+@keyframes shrink {
+    0% {height: 400px;} 
+    100%{height: 75px;}
+}
+
+
+
+
+.yellow-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+}
+.red-box{
+       /* position: static;    */
+    /* display: flex; */
+    /* justify-content: center; */
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+.black-box{
+      /* position: relative;   */
+    background-color: black;
+    width: 75px;
+    height: 75px;
+    
+}
+.blue-box{
+      /* position: relative;   */
+    overflow: hidden;
+    background-color: lightblue;
+     width: 50px;
+    height: 50px; 
+    /* align-self: center;  */
+     /* animation-iteration-count: infinite;  */
+  /* animation-name: grower;
+  animation-duration: 2s;
+animation-fill-mode: forwards */
+
+}
+.purple-box{
+     /* position: relative;  */
+    overflow: hidden;
+    background-color: lavender;
+    margin: 60px;
+     width: 50px;
+    height: 50px; 
+    align-self: flex-end; 
+     /* animation-iteration-count: infinite;  */
+  /* animation-name: shrink;
+  animation-duration: 2s;
+  animation-fill-mode: forwards */
+
+}
+.changeRed{
+    background-color: red;
+}
+
+.red{
+  background-color: red;
+  width: 50px;
+  height: 50px
+}
+.blue{
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
 }

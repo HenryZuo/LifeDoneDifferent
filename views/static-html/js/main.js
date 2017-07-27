@@ -10,4 +10,29 @@ $( document ).ready(function() {
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').focus()
 })
+
+$('.blue-box').mouseover(function(){
+    console.log("you clicked me!")
+    $('.blue-box').addClass('grower').removeClass('shrink')
+})
+$('.blue-box').mouseout(function(){
+    console.log("you clicked me!")
+
+    $('.blue-box').addClass('shrink').removeClass('grower')
+})
+
+$('.podcast-card').mouseenter(function(){
+    console.log("you clicked me!")
+    $(this).children('a').children('.podcast-image-writing').children('.written-content').addClass('grower').removeClass('shrink')
+})
+$('.podcast-card').mouseleave(function(){
+    console.log("you clicked me!")
+
+    $(this).children('a').children('.podcast-image-writing').children('.written-content').addClass('shrink').removeClass('grower')
+})
+
 });
+
+// $('.comments').on('click','.hide-replies',function(){
+//     $(this).closest('.comment').find('.replies').hide();
+// })
