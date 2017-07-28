@@ -10,8 +10,6 @@ html, body {
 }
 .full-height{
     margin-top: -30px; 
-    /* margin: 0; */
-     /* background-color: pink;  */
     min-height: 100%;
     height:auto !important; /* cross-browser */
     height: 100%; /* cross-browser */

@@ -1,7 +1,54 @@
 /* Landing Page CSS */
 body{
+    /* height: 100%; */
+    /* background-color: lightblue; */
     margin: 0 auto;
     padding-bottom: 70px !important
+}
+html, body {
+    height: 100%;
+}
+.full-height{
+    margin-top: -30px; 
+    min-height: 100%;
+    height:auto !important; /* cross-browser */
+    height: 100%; /* cross-browser */
+     display: flex; 
+     align-items: center;    
+}
+.btn-primary {
+    color: #fff;
+    background-color: #00acb7 !important;
+     border-color: #00acb7; 
+}
+.btn-primary.focus, .btn-primary:focus{
+    color: #fff;
+    background-color: #00acb7 ;
+     border-color: #00acb7; 
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #ff4c2f !important;
+     border-color: #ff4c2f; 
+}
+.btn-primary:active {
+    color: #fff;
+    background-color: #ff4c2f ;
+     border-color: #ff4c2f; 
+}
+
+.horz-center{
+    display: flex;
+    justify-content: center;
+}
+.button-style{
+    width: 75%;
+}
+.bttn-row{
+   padding: 30px 0 0 0; 
+}
+.button-spacing{
+    padding: 10px 0 0 0;
 }
 h4{
     color: #ff4c2f !important
@@ -10,14 +57,30 @@ h4{
 h3{
     color: #00acb7 !important
 }
+
 #landing-logo{
     margin: auto;
-    width: 70%;
-    padding: 15%;
+    width: 100%;
+    
 }
- /* .container{
-    background-color: blue;
-}  */
+ #mc_embed_signup{
+    width: 100% !important
+}
+
+#mc_embed_signup h2{
+    font-variant: small-caps !important;
+    letter-spacing: 2px !important;
+    color: #00acb7 !important;
+    text-align: center !important;
+    padding-bottom: 8px !important;
+    margin-right: 5% !important;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+}
+
+#mc_embed_signup .mc-field-group label{
+    color: #ff4c2f !important
+} 
 
 /* Navigation CSS */
 
@@ -131,15 +194,35 @@ h3{
 
 /* Each Episode Page  */
 
+.full-top-row{
+    margin-top: 30px;
+}
+.episode-top-row-writing{
+    padding-left: 30px;
+}
+.episode-top-row-writing p{
+    color: #666666;
+    font-size: .1.2em;
+    line-height: 2em;
+    text-align: justify;
+}
+.episode-top-row-writing h2{
+    padding-top: 0;
+    margin-top: 0;
+    color: #ff4c2f;
+}
  .episode-card{
-    margin: 20px;
+     /* margin: 20px;  */
     border-radius: 8px;
-    background-color: #00acb7; 
-    padding: 5px;
+    background-color: #00acb7;
+    margin-bottom: 30px; 
+      padding: 10px; 
+      /* margin-right: 2%;    */
     
 } 
 .episode-card-image{
-    margin-top: 8px;
+    
+    width: 100%;
     justify-content: center;
     align-items: center;  
     box-sizing: border-box;
@@ -148,12 +231,67 @@ h3{
     border-width: 5px;
     border-color: #ffffff;
 }
+.card-block{
+    text-align: right;
+    
+}
+
+.card-block ul{
+    list-style: none;
+}
+.card-block ul li{
+    color: #666666;
+    font-size: .1.2em;
+    line-height: 2em;
+}
+#accordion a{
+    color: #ff4c2f;
+    text-align: right;
+}
+#accordion h5{
+    /* color: #ff4c2f; */
+    text-align: right;
+}
+.comment-section{
+    margin-top: 15px;
+    border-width: 2px 0 0 0;
+    border-style: solid;
+    border-color: #00acb7;
+}
+.comment-section h2{
+ color: #ff4c2f;
+ /* background-color: pink; */
+}
+.comments-made{
+    padding: 0 0 30px 0;
+}
+
+.comments-made p{
+    color: #666666;
+    font-size: 1em;
+    line-height: 1.7em;
+    text-align: justify;
+}
+.large{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.create-comment h2{
+    color: #ff4c2f;
+}
+.background-grey{
+    background-color: #ebebeb;
+    width: 100%;
+    margin: 0 ;
+    padding:20px;
+
+}
 
 /* AUDIO PLAYER */
-audio{
+/* audio{
     width: 400px;
     background-color: none;
-}
+} */
 
 /* ANIMATION */
 .grower{
