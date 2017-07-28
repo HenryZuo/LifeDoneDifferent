@@ -21,6 +21,22 @@ h3{
 
 /* Navigation CSS */
 
+
+.navbar-default {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+   background-color: #00acb7; 
+   color: #ffffff;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #ff4c2f;
+}
+.navbar-collapse ul li{
+    text-align: center;
+}
 /* Podcast Main Page  */
 
 .blue-border{
@@ -32,7 +48,7 @@ h3{
     padding-bottom: 5px;
     width: 308px;
     border-radius: 8px;
-    margin: 3% auto;  
+    margin: 8% auto;  
 
 }
 .podcast-card{
@@ -48,7 +64,7 @@ h3{
 }
 .podcast-card p{
     /* color: #606161; */
-    color:#666666;
+    color:#404040;
 }
 .podcast-card a{
     text-decoration: none;
@@ -77,7 +93,7 @@ h3{
 .written-content{
     align-self: flex-start;
     background-color: white; 
-     opacity: 0.8; 
+     opacity: 0.85; 
     overflow: hidden;
     border-radius: 8px;
     height: 80px;
