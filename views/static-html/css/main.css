@@ -212,16 +212,13 @@ h3{
     color: #ff4c2f;
 }
  .episode-card{
-     /* margin: 20px;  */
     border-radius: 8px;
     background-color: #00acb7;
     margin-bottom: 30px; 
-      padding: 10px; 
-      /* margin-right: 2%;    */
+    padding: 10px; 
     
 } 
 .episode-card-image{
-    
     width: 100%;
     justify-content: center;
     align-items: center;  
@@ -249,7 +246,6 @@ h3{
     text-align: right;
 }
 #accordion h5{
-    /* color: #ff4c2f; */
     text-align: right;
 }
 .comment-section{
@@ -260,7 +256,6 @@ h3{
 }
 .comment-section h2{
  color: #ff4c2f;
- /* background-color: pink; */
 }
 .comments-made{
     padding: 0 0 30px 0;
