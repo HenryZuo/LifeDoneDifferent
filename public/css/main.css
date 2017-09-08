@@ -87,12 +87,16 @@ h3{
 /* Navigation CSS */
 .navbar-default {
     background-color: #f8f8f8;
-    border-color: #9d9d9d;
-    border-width: 0 0 1px 0;
+    /* border-color: #9d9d9d;
+    border-width: 0 0 1px 0; */
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
    background-color: #00acb7; 
    color: #ffffff;
+   border-radius: 5px;
+   /* margin-top: -10px;
+   padding-top: 25px;
+   padding-bottom: 25px; */
 }
 
 .navbar-default .navbar-nav>li>a:hover {
