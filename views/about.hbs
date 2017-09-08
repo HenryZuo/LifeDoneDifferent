@@ -1,50 +1,148 @@
-   <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                    aria-expanded="false">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <a class="navbar-brand" href="/" style="padding-right:0; margin: 5px -20px 15px 0">
+            <img src="/imgs/banner-header-pastel.png" width="255px" alt="" >
+        </a>
+    <span class="navbar-right navbar-brand" style="padding:0; margin: 8px 15px 0 0">
+            <img src="/imgs/Icon-logo.png" width="38px"  alt="" >
+        </span>
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" style="margin-top: 15px" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">
+                </button> {{!-- <a class="navbar-brand" href="/">
                     <img src="/imgs/banner-header-pastel.png" width="200px" alt="">
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="/podcasts"> Podcasts</a></li>
-                    <li><a href="/about">About</a></li>
-                    {{!-- <li><a href="/contact">Contact</a></li> --}}
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+                </a> --}}
         </div>
-        <!-- /.container-fluid -->
-    </nav>
 
-  <div class="container-fluid">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-        <div class="row">
+            <ul class="nav navbar-nav navbar-right" style="margin-top: 10px">
+                <li><a href="/podcasts"> Podcasts</a></li>
+                <li class="active"><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
 
-            <div class="episode-card col-sm-4">
+<!-- START OF ABOUT PAGE -->
+<div class="container-fluid" style="padding-right:0; padding-left:0;">
+    <div class="col-xs-10 col-xs-offset-1">
+        <div class="row full-top-row">
 
-                <img src="http://i.imgur.com/6bU115l.jpg" alt="" class="episode-card-image col-sm-12">
-                <!-- <div class="podcast-card-components"> -->
-                <!-- <div class="podcast-card-headline">
-
-            </div> -->
-                <!-- </div> -->
+            <div class="about-card col-xs-12  col-lg-6">
+                <!-- <div class="about-card"> -->
+                <div id="image"></div>
+                <!-- <img src="http://i.imgur.com/uAjff9y.jpg" alt="" class="about-card-image"> -->
             </div>
-            <div>
-                <h1> Welcome to the stories of <br />Life Done Different. </h1>
-                <h3>Created by Nathan Wang</h3>
-                <p>Life Done Different is dedicated to exploring unconventional lifestyle paths, the people who create them and the trade offs that come with them.</p>
-                <p>Life Done Different is an honest conversation. It is created it hope of presenting another vantage point; an alternative to the norm. No matter your medium, challenging the status quo is good thing.</p>
+            <!-- </div> -->
+            <div class="col-lg-6 about-title">
+                <div>
+                    <audio controls preload="none" class="large">
+                        <source type="audio/mp3" src="{{p.audioLink}}" />
+                        <source src="vincent.ogg" type="audio/ogg" />
+                    </audio>
+
+                </div>
+                <h1><span style="font-size:.6em; color:#666666"> These are the stories of </span><br />Life Done Different<span>.</span>
+                    <!-- <span style="color:#00acb7">|</span> -->
+                    <!-- <span style="font-size:.7em; color:#666666">Occupation</span>  -->
+                </h1>
+
+                <p>Life Done Different is dedicated to exploring unconventional lifestyle paths, the people who create them
+                    and the trade offs that come with them. </p>
+                <p>Life Done Different is an honest conversation. It is created it hope of presenting another vantage point;
+                    an alternative to the norm. No matter your medium, challenging the status quo is good thing.</p>
+
             </div>
         </div>
+        <div class="row show-comments-links">
+            <div id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo">
+                        <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          + Show Notes and Links
+        </a>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="card-block">
+                            <div class="show-notes col-xs-6">
+                                <ul>
+                                    <li>Test note1</li>
+                                    <li>Test note 2</li>
+                                    <li>Test note 3</li>
+                                </ul>
+                            </div>
+                            <div class="show-links col-xs-6">
+                                <ul>
+                                    <li>Test Link 1</li>
+                                    <li>Test Link 2</li>
+                                    <li>Test Link 3</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+    <div class="comment-section col-xs-10 col-xs-offset-1">
+        <h2>Comments:</h2>
+        <div class="comments-made">
+            <h3>Name <span style="font-size:.7em; color:#666666">time</span></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis fermentum sem, quis blandit tellus
+                placerat et. Proin vitae vehicula leo. Maecenas finibus hendrerit risus vel rhoncus.Aliquam erat volutpat.
+            </p>
+        </div>
+
+        <div class="comments-made">
+            <h3>Name <span style="font-size:.7em; color:#666666">time</span></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis fermentum sem, quis blandit tellus
+                placerat et. Proin vitae vehicula leo. Maecenas finibus hendrerit risus vel rhoncus.Aliquam erat volutpat.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="row col-xs-12 background-grey">
+        <div class="col-xs-10 col-xs-offset-1">
+            <div class="create-comment">
+                <h2>Leave Your Comment!</h2>
+                <form action="POST">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="usr" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="pwd" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="comment">Comment:</label> -->
+                        <textarea class="form-control" rows="5" id="comment" placeholder="Write your comment here..."></textarea>
+                    </div>
+                    <input type="submit" name="" value="Submit" class="button btn-primary">
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End OF ABOUT PAGE -->
