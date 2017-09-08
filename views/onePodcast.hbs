@@ -1,73 +1,109 @@
-   <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                    aria-expanded="false">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">
+      <a class="navbar-brand" href="/">
                     <img src="/imgs/banner-header-pastel.png" width="200px" alt="">
                 </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="/podcasts"> Podcasts</a></li>
-                    <li><a href="/about">About</a></li>
-                    {{!-- <li><a href="/contact">Contact</a></li> --}}
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-
-{{!-- <h1>Episode page</h1> --}}
-<div class="container-fluid">
-  {{!-- PODCAST CONTENT --}}
-  <div class="row">
-    <div class="episode-card col-sm-4">
-
-      <img src="{{p.imageURL}}" alt="" class="episode-card-image col-sm-12">
-      <!-- <div class="podcast-card-components"> -->
-      <!-- <div class="podcast-card-headline">
-
-            </div> -->
-      <!-- </div> -->
     </div>
-    <div>
-      <audio controls preload="none" class="large">
- <source type="audio/mp3" src="{{p.audioLink}}"/>
-   <source src="vincent.ogg" type="audio/ogg"/> 
-</audio>
-   
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="/podcasts"> Podcasts</a></li>
+        <li><a href="/about">About</a></li>
+        {{!--
+        <li><a href="/contact">Contact</a></li> --}}
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
   </div>
-      <h1>{{p.guestName}}</h1>
-      <h2>{{p.occupation}}</h2>
-      <p>{{p.longBio}}</p>
+  <!-- /.container-fluid -->
+</nav>
+
+
+{{!--
+<h1>Episode page</h1> --}}
+<div class="container-fluid" style="padding-right:0; padding-left:0;"> {{!-- PODCAST CONTENT --}}
+  <div class="col-xs-10 col-xs-offset-1">
+    <div class="row full-top-row">
+      <div class="episode-card col-xs-8 col-xs-offset-2 col-md-offset-0 col-md-4">
+
+        <img src="{{p.imageURL}}" alt="" class="episode-card-image">
+
+      </div>
+      <div class="col-md-8 episode-top-row-writing">
+        <div>
+          <audio controls preload="none" class="large">
+            <source type="audio/mp3" src="{{p.audioLink}}" />
+            <source src="vincent.ogg" type="audio/ogg" />
+          </audio>
+
+        </div>
+        <h2>{{p.guestName}}
+          <span style="color:#00acb7">|</span>
+          <span style="font-size:.7em; color:#666666">{{p.occupation}}</span> </h2>
+
+        <p>{{p.longBio}}</p>
+      </div>
+    </div>
+    <div class="row show-comments-links">
+      <div id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="card">
+          <div class="card-header" role="tab" id="headingTwo">
+            <h5 class="mb-0">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          + Show Notes and Links
+        </a>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="card-block">
+              <div class="show-links col-xs-6">
+                <ul>
+                  {{#each p.showLinks}}
+                  <li><a href="http://{{this}}">{{this}}</a></li>
+                  {{/each}}
+                </ul>
+              </div>
+              <div class="show-notes col-xs-6">
+                <ul>
+                  {{#each p.showNotes}}
+                  <li>{{this}}</li>
+                  {{/each}}
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   {{!-- ALL WRITTEN COMMENTS --}}
 
-  <div class="comments-made">
+  <div class="comment-section col-xs-10 col-xs-offset-1">
     <h2>Comments:</h2>
     {{#each cArr}}
-    <h4>{{this.name}}</h4>
-    <h5>{{this.time}}</h5>
-    <p>{{this.content}}</p>
+    <div class="comments-made">
+      <h3>{{this.name}} <span style="font-size:.7em; color:#666666">{{this.time}}</span></h3>
+      <p>{{this.content}}</p>
+    </div>
     {{/each}}
   </div>
 
-  {{!-- COMMENT FORM - POST REQUEST --}}
-  <div class="container-fluid" style="width:50%; padding-bottom:2em; margin-top:2em;">
+
+ {{!-- COMMENT FORM - POST REQUEST --}}
+   {{!-- <div class="container-fluid" style="width:50%; padding-bottom:2em; margin-top:2em;">
     <h2>Add Comment Here: </h2>
     <form method="post">
       <div class="form-group">
@@ -85,4 +121,27 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
+</div>   --}}
+
+ <div class="row col-xs-12 background-grey">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div class="create-comment">
+                    <h2>Leave Your Comment!</h2>
+                    <form method="POST">
+                        <div class="form-group">
+                            <input name="name" type="text" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input name="email" type="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="comment">Comment:</label> -->
+                            <textarea class="form-control" rows="5" name="content" placeholder="Write your comment here..."></textarea>
+                        </div>
+                        <input type="submit" name="" value="Submit" class="button btn-primary">
+                    </form>
+                </div>
+
+            </div>
+        </div> 
 </div>

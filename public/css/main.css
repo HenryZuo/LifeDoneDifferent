@@ -8,6 +8,7 @@ body{
 html, body {
     height: 100%;
 }
+
 .full-height{
     margin-top: -30px; 
     min-height: 100%;
@@ -60,7 +61,8 @@ h3{
 
 #landing-logo{
     margin: auto;
-    width: 100%;
+     width: 100%; 
+    padding: 0 10%;
     
 }
  #mc_embed_signup{
@@ -196,15 +198,32 @@ h3{
 
 /* Each Episode Page  */
 
+.full-top-row{
+    margin-top: 30px;
+}
+.episode-top-row-writing{
+    padding-left: 30px;
+}
+.episode-top-row-writing p{
+    color: #666666;
+    font-size: .1.2em;
+    line-height: 2em;
+    text-align: justify;
+}
+.episode-top-row-writing h2{
+    padding-top: 0;
+    margin-top: 0;
+    color: #ff4c2f;
+}
  .episode-card{
-    margin: 20px;
     border-radius: 8px;
-    background-color: #00acb7; 
-    padding: 5px;
+    background-color: #00acb7;
+    margin-bottom: 30px; 
+    padding: 10px; 
     
 } 
 .episode-card-image{
-    margin-top: 8px;
+    width: 100%;
     justify-content: center;
     align-items: center;  
     box-sizing: border-box;
@@ -213,12 +232,69 @@ h3{
     border-width: 5px;
     border-color: #ffffff;
 }
+.card-block{
+    text-align: right;
+    
+}
+
+.card-block ul{
+    list-style: none;
+}
+.card-block ul li{
+    color: #666666;
+    font-size: .1.2em;
+    line-height: 2em;
+}
+#accordion a{
+    color: #ff4c2f;
+    text-align: right;
+}
+#accordion h5{
+    text-align: right;
+}
+.show-links ul li a{
+    color: #00acb7;
+
+}
+.comment-section{
+    margin-top: 15px;
+    border-width: 2px 0 0 0;
+    border-style: solid;
+    border-color: #00acb7;
+}
+.comment-section h2{
+ color: #ff4c2f;
+}
+.comments-made{
+    padding: 0 0 30px 0;
+}
+
+.comments-made p{
+    color: #666666;
+    font-size: 1em;
+    line-height: 1.7em;
+    text-align: justify;
+}
+.large{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.create-comment h2{
+    color: #ff4c2f;
+}
+.background-grey{
+    background-color: #ebebeb;
+    width: 100%;
+    margin: 0 ;
+    padding:20px;
+
+}
 
 /* AUDIO PLAYER */
-audio{
+/* audio{
     width: 400px;
     background-color: none;
-}
+} */
 
 /* ANIMATION */
 .grower{
