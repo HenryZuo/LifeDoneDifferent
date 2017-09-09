@@ -25,7 +25,7 @@
             <ul class="nav navbar-nav navbar-right" style="margin-top: 10px">
                 <li><a href="/podcasts"> Podcasts</a></li>
                 <li class="active"><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="/about#contact-section" >Contact</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -52,7 +52,11 @@
                     </audio>
 
                 </div>
-                <h1><span style="font-size:.6em; color:#666666"> These are the stories of </span><br />Life Done Different<span>.</span>
+                {{!-- <h1><span style="font-size:.6em; color:#666666"> These are the stories of </span><br />Life Done Different<span>.</span>
+                    <!-- <span style="color:#00acb7">|</span> -->
+                    <!-- <span style="font-size:.7em; color:#666666">Occupation</span>  -->
+                </h1> --}}
+                <h1><span style="font-size:.6em; color:#666666"> These are the stories of </span><br /><img src="/imgs/banner-header-pastel.png" alt="" width="300">
                     <!-- <span style="color:#00acb7">|</span> -->
                     <!-- <span style="font-size:.7em; color:#666666">Occupation</span>  -->
                 </h1>
@@ -64,69 +68,34 @@
 
             </div>
         </div>
-        <div class="row show-comments-links">
-            <div id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="card">
-                    <div class="card-header" role="tab" id="headingTwo">
-                        <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          + Show Notes and Links
-        </a>
-                        </h5>
-                    </div>
-                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-                        <div class="card-block">
-                            <div class="show-notes col-xs-6">
-                                <ul>
-                                    <li>Test note1</li>
-                                    <li>Test note 2</li>
-                                    <li>Test note 3</li>
-                                </ul>
-                            </div>
-                            <div class="show-links col-xs-6">
-                                <ul>
-                                    <li>Test Link 1</li>
-                                    <li>Test Link 2</li>
-                                    <li>Test Link 3</li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-        </div>
+        
 
 
 
 
     </div>
-    <div class="comment-section col-xs-10 col-xs-offset-1">
-        <h2>Comments:</h2>
-        <div class="comments-made">
-            <h3>Name <span style="font-size:.7em; color:#666666">time</span></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis fermentum sem, quis blandit tellus
-                placerat et. Proin vitae vehicula leo. Maecenas finibus hendrerit risus vel rhoncus.Aliquam erat volutpat.
-            </p>
+    <div id="contact-section" class="anchor col-xs-10 col-xs-offset-1">
+        <h2>Stay in Contact.</h2>
+        <p>I love to hear from listeners about anything: future guests, ideas, or feedback. Follow me on social media and stay in touch. You can also message me directy, email me, or just subscribe to hear more! I am here to hear what you want to share.</p>
+        <div>email: nate@lifedonedifferent.com</div>
+        <div class="subscribe">
+            <div class="itunes">itunes</div>
+            <div class="sticher">sticher</div>
+        </div>
+        <div class="social-media-icons">
+            <div class="facebook">facebook</div>
+            <div class="twitter">twitter</div>
+            <div class="instagram">instagram</div>
         </div>
 
-        <div class="comments-made">
-            <h3>Name <span style="font-size:.7em; color:#666666">time</span></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis fermentum sem, quis blandit tellus
-                placerat et. Proin vitae vehicula leo. Maecenas finibus hendrerit risus vel rhoncus.Aliquam erat volutpat.
-            </p>
-        </div>
+        
     </div>
 
 
     <div class="row col-xs-12 background-grey">
         <div class="col-xs-10 col-xs-offset-1">
-            <div class="create-comment">
-                <h2>Leave Your Comment!</h2>
+            <div class="send-message">
+                <h2>Love to hear from you!</h2>
                 <form action="POST">
                     <div class="form-group">
                         <input type="text" class="form-control" id="usr" placeholder="Name">
