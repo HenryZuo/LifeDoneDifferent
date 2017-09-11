@@ -25,7 +25,8 @@
             <ul class="nav navbar-nav navbar-right" style="margin-top: 10px">
                 <li><a href="/podcasts"> Podcasts</a></li>
                 <li class="active"><a href="/about">About</a></li>
-                <li><a href="/about#contact-section" >Contact</a></li>
+                <li><a href="/about#contact-section">Contact</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModal" style="color: #ff4c2f">Subscribe</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -48,71 +49,226 @@
             <div class="col-lg-6 about-title">
                 <div>
                     <audio controls preload="none" class="large">
-                        <source type="audio/mp3" src="{{p.audioLink}}" />
+                        <source type="audio/mp3" src="http://traffic.libsyn.com/lifedonedifferent/20Welcome20to20Life20Done20Different.mp3" />
                         <source src="vincent.ogg" type="audio/ogg" />
                     </audio>
 
                 </div>
-                {{!-- <h1><span style="font-size:.6em; color:#666666"> These are the stories of </span><br />Life Done Different<span>.</span>
+                {{!--
+                <h1><span style="font-size:.6em; color:#666666"> These are the stories of </span><br />Life Done Different<span>.</span>
                     <!-- <span style="color:#00acb7">|</span> -->
                     <!-- <span style="font-size:.7em; color:#666666">Occupation</span>  -->
                 </h1> --}}
-                <h1><span style="font-size:.6em; color:#666666"> These are the stories of </span><br /><img src="/imgs/banner-header-pastel.png" alt="" width="300">
+                
+            
+            <div class="about-title-line1">
+                <h1> These are the stories of </h1>
+                
+            </div>
+            <div class="about-title-line2"><img src="/imgs/banner-header-pastel.png"
+                        alt="" width="300">
                     <!-- <span style="color:#00acb7">|</span> -->
                     <!-- <span style="font-size:.7em; color:#666666">Occupation</span>  -->
-                </h1>
+                    
+            </div>
+            <p>Life Done Different is dedicated to people who have taken unconventional paths in life, whether in their career, lifestyle or thought process. Listen in to hear their stories and honest answers about the trade offs that come with their choices, like, "Can porn stars really change careers?" Get ready to challenge your assumptions and explore new perspectives with host Nate Wang. </p>
 
-                <p>Life Done Different is dedicated to exploring unconventional lifestyle paths, the people who create them
-                    and the trade offs that come with them. </p>
-                <p>Life Done Different is an honest conversation. It is created it hope of presenting another vantage point;
-                    an alternative to the norm. No matter your medium, challenging the status quo is good thing.</p>
-
+            {{!-- <p>Life Done Different is dedicated to exploring unconventional lifestyle paths, the people who create them and
+                the trade offs that come with them. </p>
+            <p>Life Done Different is an honest conversation. It is created it hope of presenting another vantage point; an
+                alternative to the norm. No matter your medium, challenging the status quo is good thing.</p> --}}
+                
+<div class="social-media-share">
+                <p style="color:#00acb7">Share on</p>
+                <div class="facebook-share share-icon">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=http://lifedonedifferent.com/about" target="_blank" title="Follow on Facebook"><img src="/imgs/social-media-icons/facebook-grey.png"  alt="facebook icon" class="image">
+                        <div class="overlay">
+                            <img src="/imgs/social-media-icons/facebook-blue.png"  alt="Facebook Icon" class="image">
+                        </div>
+                    </a>
+                </div>
+                <div class="twitter-share share-icon">
+                    <a href="http://www.twitter.com/share?url=http://www.lifedonedifferent.com/about" target="_blank" title="Follow on Twitter"><img src="/imgs/social-media-icons/twitter-grey.png"  alt="Twitter bird icon" class="image">
+                        <div class="overlay">
+                            <img src="/imgs/social-media-icons/twitter-blue.png"  alt="Twitter bird icon" class="image">
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
         
-
-
-
-
-    </div>
-    <div id="contact-section" class="anchor col-xs-10 col-xs-offset-1">
-        <h2>Stay in Contact.</h2>
-        <p>I love to hear from listeners about anything: future guests, ideas, or feedback. Follow me on social media and stay in touch. You can also message me directy, email me, or just subscribe to hear more! I am here to hear what you want to share.</p>
-        <div>email: nate@lifedonedifferent.com</div>
-        <div class="subscribe">
-            <div class="itunes">itunes</div>
-            <div class="sticher">sticher</div>
-        </div>
-        <div class="social-media-icons">
-            <div class="facebook">facebook</div>
-            <div class="twitter">twitter</div>
-            <div class="instagram">instagram</div>
-        </div>
-
         
     </div>
+</div>
+<div id="contact-section" class="anchor col-xs-10 col-xs-offset-1">
+    <h2>Stay in Contact.</h2>
+    <p>I love to hear from listeners about anything: future guests, ideas, or feedback. Follow me on social media and stay in
+        touch. You can also email me directy or just subscribe to hear more! I am here to hear what you want to share.</p>
+    <div class="email-contact">
+        <div class="email-title">email:</div>
+        <div class="email-address"><a href="mailto:nate@lifedonedifferent.com?Subject=Website%20Contact">nate@lifedonedifferent.com</a></div>
+    </div>
+</div>
 
 
-    <div class="row col-xs-12 background-grey">
-        <div class="col-xs-10 col-xs-offset-1">
-            <div class="send-message">
-                <h2>Love to hear from you!</h2>
-                <form action="POST">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="usr" placeholder="Name">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" id="pwd" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <!-- <label for="comment">Comment:</label> -->
-                        <textarea class="form-control" rows="5" id="comment" placeholder="Write your comment here..."></textarea>
-                    </div>
-                    <input type="submit" name="" value="Submit" class="button btn-primary">
-                </form>
-            </div>
+{{!--
+<div class="row col-xs-12 background-grey">
+    <div class="col-xs-10 col-xs-offset-1">
+        <div class="send-message">
+            <h2>Love to hear from you!</h2>
+            <form action="POST">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="usr" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwd" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <!-- <label for="comment">Comment:</label> -->
+                    <textarea class="form-control" rows="5" id="comment" placeholder="Write your comment here..."></textarea>
+                </div>
+                <input type="submit" name="" value="Submit" class="button btn-primary">
+            </form>
+        </div>
 
+    </div>
+</div> --}}
+</div>
+<!-- End OF ABOUT PAGE -->
+
+{{!-- START SOCIAL MEDIA ELEMENTS --}}
+<div class="social-media-follows">
+    <h2>Follow Life Done Different</h2>
+    <div class="social-media-icons">
+        <div class="newsletter icon">
+            <a href="#" title="Sign up for Our Newsletter" data-toggle="modal" data-target="#myModal2"><img src="/imgs/social-media-icons/newsletter-grey.png"  alt="Envelope Icon" class="image">
+                <div class="overlay">
+                    <img src="/imgs/social-media-icons/newsletter-blue.png"  alt="Avatar" class="image">
+                </div>
+              </a>
+        </div>
+
+        <div class="facebook icon">
+            <a href="https://www.facebook.com/LifeDoneDifferent" target="_blank" title="Follow on Facebook"><img src="/imgs/social-media-icons/facebook-grey.png"  alt="facebook icon" class="image">
+                <div class="overlay">
+                    <img src="/imgs/social-media-icons/facebook-blue.png"  alt="Avatar" class="image">
+                </div>
+              </a>
+        </div>
+        <div class="twitter icon">
+            <a href="https://twitter.com/LifeDoneDiffrnt" target="_blank" title="Follow on Twitter"><img src="/imgs/social-media-icons/twitter-grey.png" alt="twitter bird icon" class="image">
+                <div class="overlay">
+                  <img src="/imgs/social-media-icons/twitter-blue.png" alt="Avatar" class="image">
+                </div>
+              </a>
+        </div>
+        <div class="subscribe icon">
+            <a href="#" title="Subscribe Now!" data-toggle="modal" data-target="#myModal"><img src="/imgs/social-media-icons/subscribe-grey.png" alt="follow icon" class="image">
+                <div class="overlay">
+                  <img src="/imgs/social-media-icons/subscribe-blue.png" alt="Avatar" class="image">
+                </div>
+              </a>
         </div>
     </div>
 </div>
-<!-- End OF ABOUT PAGE -->
+
+<!-- Modal Subscribe-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <!-- Begin Body of Modal Form -->
+            <div class="subscribe-md-header">
+                <h2>Subscribe and Never Miss and Episode!</h2>
+            </div>
+            <div class="subscribe-md-body">
+                <div class="subscribe-itunes">
+                    <h2> Subscribe on iTunes</h2>
+                    <h2><a href="https://itunes.apple.com/us/podcast/life-done-different/id1266984072?mt=2&ls=1" target="_blank"><img src="/imgs/available-iTunes.png" width="180" alt="#"></a></h2>
+                    <!-- <img src="" alt=""> -->
+                </div>
+                <!-- <div class="subscribe-sticher">
+                                <h2> Subscribe on Sticher</h2>
+                                <h2><a href=""><img src="/imgs/available-Sticher.jpg" width="180" alt=""></a></h2>
+                                
+                            </div> -->
+            </div>
+
+            <!--End Body of Modal Form-->
+
+            <div class="modal-footer">
+                <div class="ft-signup">
+                    <div class="justify-start subscribe-nav-link" data-dismiss="modal" data-toggle="modal" data-target="#myModal2"><a href="#">Sign up for our Newsletter!</a></div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Modal -->
+
+<!-- Modal Sign Up-->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <!-- Begin MailChimp Signup Form -->
+
+            <div id="mc_embed_signup">
+                <form action="http://lifedonedifferent.us16.list-manage.com/subscribe/post?u=c0105406e04746bd1685a0671&amp;id=a871b857b1"
+                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+                    novalidate>
+                    <div id="mc_embed_signup_scroll">
+                        <h2>Sign Up for Our Newsletter</h2>
+                        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                        <div class="mc-field-group">
+                            <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+                                                    </label>
+                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                        </div>
+                        <div class="mc-field-group">
+                            <label for="mce-FNAME">First Name  <span class="asterisk">*</span>
+                                                    </label>
+                            <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+                        </div>
+                        <!-- <div class="mc-field-group">
+                                                    <label for="mce-LNAME">Last Name </label>
+                                                    <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                                                </div> -->
+                        <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                        </div>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c0105406e04746bd1685a0671_a871b857b1" tabindex="-1" value=""></div>
+                        <div class="clear"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button orange"></div>
+                    </div>
+                </form>
+            </div>
+            <script type='text/javascript' src='http://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+            <script type='text/javascript'>
+                (function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; }(jQuery)); var $mcj = jQuery.noConflict(true);
+            </script>
+            <!--End mc_embed_signup-->
+
+            <div class="modal-footer">
+                <div class="ft-signup">
+                    <div class="justify-start subscribe-nav-link" data-dismiss="modal" data-toggle="modal" data-target="#myModal"><a href="#">Subscribe to the Show</a></div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Modal -->
+<!-- START FOOTER -->
+<div class="footer">
+    <div class="site-map">
+        <a href="/podcasts">Podcasts</a>
+        <a href="/about">About</a>
+        <a href="/about#contact-section">Contact</a>
+        <a href="#" data-toggle="modal" data-target="#myModal">Subscribe</a>
+    </div>
+    <p>Copyright 2017 Life Done Different. All Rights Reserved.</p>
+</div>
+<!-- END FOOTER -->

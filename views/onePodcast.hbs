@@ -1,38 +1,38 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-       <a class="navbar-brand" href="/" style="padding-right:0; margin: 5px -20px 15px 0">
+  <a class="navbar-brand" href="/" style="padding-right:0; margin: 5px -20px 15px 0">
             <img src="/imgs/banner-header-pastel.png" width="255px" alt="" >
         </a>
-        <span class="navbar-right navbar-brand" style="padding:0; margin: 8px 15px 0 0">
+  <span class="navbar-right navbar-brand" style="padding:0; margin: 8px 15px 0 0">
             <img src="/imgs/Icon-logo.png" width="38px"  alt="" >
         </span>
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" style="margin-top: 15px" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                    aria-expanded="false">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" style="margin-top: 15px" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
-                {{!-- <a class="navbar-brand" href="/">
+                </button> {{!-- <a class="navbar-brand" href="/">
                     <img src="/imgs/banner-header-pastel.png" width="200px" alt="">
                 </a> --}}
-            </div>
+    </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                <ul class="nav navbar-nav navbar-right" style="margin-top: 10px">
-                    <li class="active"><a href="/podcasts"> Podcasts</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+      <ul class="nav navbar-nav navbar-right" style="margin-top: 10px">
+        <li class="active"><a href="/podcasts"> Podcasts</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/about#contact-section">Contact</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#myModal" style="color: #ff4c2f">Subscribe</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
 
 
 {{!--
@@ -58,6 +58,23 @@
           <span style="font-size:.7em; color:#666666">{{p.occupation}}</span> </h2>
 
         <p>{{p.longBio}}</p>
+        <div class="social-media-share">
+                <p style="color:#00acb7">Share on</p>
+                <div class="facebook-share share-icon">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=http://lifedonedifferent.com/podcasts/{{p._id}}" target="_blank" title="Follow on Facebook"><img src="/imgs/social-media-icons/facebook-grey.png"  alt="facebook icon" class="image">
+                        <div class="overlay">
+                            <img src="/imgs/social-media-icons/facebook-blue.png"  alt="Facebook Icon" class="image">
+                        </div>
+                    </a>
+                </div>
+                <div class="twitter-share share-icon">
+                    <a href="http://www.twitter.com/share?url=http://www.lifedonedifferent.com/podcasts/{{p._id}}" target="_blank" title="Follow on Twitter"><img src="/imgs/social-media-icons/twitter-grey.png"  alt="Twitter bird icon" class="image">
+                        <div class="overlay">
+                            <img src="/imgs/social-media-icons/twitter-blue.png"  alt="Twitter bird icon" class="image">
+                        </div>
+                    </a>
+                </div>
+            </div>
       </div>
     </div>
     <div class="row show-comments-links">
@@ -65,7 +82,7 @@
         <div class="card">
           <div class="card-header" role="tab" id="headingTwo">
             <h5 class="mb-0">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="padding-right: 15px;">
           + Show Notes and Links
         </a>
             </h5>
@@ -150,3 +167,141 @@
   </div>
 </div>
 </div>
+{{!-- End EPISODE ELEMENTS --}}
+
+{{!-- START SOCIAL MEDIA ELEMENTS --}}
+<div class="social-media-follows">
+    <h2>Follow Life Done Different</h2>
+    <div class="social-media-icons">
+      <div class="newsletter icon">
+        <a href="#" title="Sign up for Our Newsletter" data-toggle="modal" data-target="#myModal2"><img src="/imgs/social-media-icons/newsletter-grey.png"  alt="Envelope Icon" class="image">
+                <div class="overlay">
+                    <img src="/imgs/social-media-icons/newsletter-blue.png"  alt="Avatar" class="image">
+                </div>
+              </a>
+      </div>
+
+      <div class="facebook icon">
+        <a href="https://www.facebook.com/LifeDoneDifferent" target="_blank" title="Follow on Facebook"><img src="/imgs/social-media-icons/facebook-grey.png"  alt="facebook icon" class="image">
+                <div class="overlay">
+                    <img src="/imgs/social-media-icons/facebook-blue.png"  alt="Avatar" class="image">
+                </div>
+              </a>
+      </div>
+      <div class="twitter icon">
+        <a href="https://twitter.com/LifeDoneDiffrnt" target="_blank" title="Follow on Twitter"><img src="/imgs/social-media-icons/twitter-grey.png" alt="twitter bird icon" class="image">
+                <div class="overlay">
+                  <img src="/imgs/social-media-icons/twitter-blue.png" alt="Avatar" class="image">
+                </div>
+              </a>
+      </div>
+      <div class="subscribe icon">
+        <a href="#" title="Subscribe Now!" data-toggle="modal" data-target="#myModal"><img src="/imgs/social-media-icons/subscribe-grey.png" alt="follow icon" class="image">
+                <div class="overlay">
+                  <img src="/imgs/social-media-icons/subscribe-blue.png" alt="Avatar" class="image">
+                </div>
+              </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Subscribe-->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <!-- Begin Body of Modal Form -->
+        <div class="subscribe-md-header">
+          <h2>Subscribe and Never Miss and Episode!</h2>
+        </div>
+        <div class="subscribe-md-body">
+          <div class="subscribe-itunes">
+            <h2> Subscribe on iTunes</h2>
+            <h2><a href="https://itunes.apple.com/us/podcast/life-done-different/id1266984072?mt=2&ls=1" target="_blank"><img src="/imgs/available-iTunes.png" width="180" alt="#"></a></h2>
+            <!-- <img src="" alt=""> -->
+          </div>
+          <!-- <div class="subscribe-sticher">
+                                <h2> Subscribe on Sticher</h2>
+                                <h2><a href=""><img src="/imgs/available-Sticher.jpg" width="180" alt=""></a></h2>
+                                
+                            </div> -->
+        </div>
+
+        <!--End Body of Modal Form-->
+
+        <div class="modal-footer">
+          <div class="ft-signup">
+            <div class="justify-start subscribe-nav-link" data-dismiss="modal" data-toggle="modal" data-target="#myModal2"><a href="#">Sign up for our Newsletter!</a></div>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Modal -->
+
+  <!-- Modal Sign Up-->
+  <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <!-- Begin MailChimp Signup Form -->
+
+        <div id="mc_embed_signup">
+          <form action="http://lifedonedifferent.us16.list-manage.com/subscribe/post?u=c0105406e04746bd1685a0671&amp;id=a871b857b1"
+            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+            novalidate>
+            <div id="mc_embed_signup_scroll">
+              <h2>Sign Up for Our Newsletter</h2>
+              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+              <div class="mc-field-group">
+                <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+                                                    </label>
+                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+              </div>
+              <div class="mc-field-group">
+                <label for="mce-FNAME">First Name  <span class="asterisk">*</span>
+                                                    </label>
+                <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+              </div>
+              <!-- <div class="mc-field-group">
+                                                    <label for="mce-LNAME">Last Name </label>
+                                                    <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                                                </div> -->
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c0105406e04746bd1685a0671_a871b857b1" tabindex="-1" value=""></div>
+              <div class="clear"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button orange"></div>
+            </div>
+          </form>
+        </div>
+        <script type='text/javascript' src='http://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+        <script type='text/javascript'>
+          (function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; }(jQuery)); var $mcj = jQuery.noConflict(true);
+        </script>
+        <!--End mc_embed_signup-->
+
+        <div class="modal-footer">
+          <div class="ft-signup">
+            <div class="justify-start subscribe-nav-link" data-dismiss="modal" data-toggle="modal" data-target="#myModal"><a href="#">Subscribe to the Show</a></div>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Modal -->
+  <!-- START FOOTER -->
+  <div class="footer">
+    <div class="site-map">
+      <a href="/podcasts">Podcasts</a>
+      <a href="/about">About</a>
+      <a href="/about#contact-section">Contact</a>
+      <a href="#" data-toggle="modal" data-target="#myModal">Subscribe</a>
+    </div>
+    <p>Copyright 2017 Life Done Different. All Rights Reserved.</p>
+  </div>
+  <!-- END FOOTER -->
