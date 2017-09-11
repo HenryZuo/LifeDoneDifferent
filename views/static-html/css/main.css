@@ -7,6 +7,7 @@ body{
 }
 html, body {
     height: 100%;
+    padding-bottom: 1rem;
 }
 .full-height{
     margin-top: -30px; 
@@ -63,6 +64,8 @@ h3{
     width: 100%;
     
 }
+
+/* Email Sign Up Modal */
  #mc_embed_signup{
     width: 100% !important
 }
@@ -76,12 +79,82 @@ h3{
     margin-right: 5% !important;
     border-style: solid;
     border-width: 0 0 1px 0;
+    border-bottom-color: #BDBDBD;
 }
 
 #mc_embed_signup .mc-field-group label{
-    color: #ff4c2f !important
+    color: #FF4B2F !important
 } 
+.ft-signup{
+    display: flex;
+    justify-content: flex-end;
+}
+.justify-start{
+    margin-right: auto;
+}
+.ft-signup .subscribe-nav-link{
+    padding: 5px 0 0 10px;
+    font-variant: small-caps;
+    font-size: 1.2em;
+}
 
+.ft-signup .subscribe-nav-link a{
+    color: #00acb7;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.orange{
+    background-color: #FF4B2F !important
+}
+.orange:hover{
+    background-color:#E0381D !important;
+}
+.close{
+    color: #ffffff !important;
+}
+/* Subscribe Modal */
+.subscribe-md-header h2{
+    font-weight: bold;
+    padding: 0;
+    margin: 15px 0;
+    font-size: 1.4em;
+    font-variant: small-caps !important;
+    letter-spacing: 2px !important;
+    color: #00acb7 !important;
+    text-align: center !important;
+    padding-bottom: 8px !important;
+    margin-right: 5% !important;
+    margin-left: 5%;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-bottom-color: #bdbdbd;
+}
+.subscribe-md-body{
+    display: flex;
+    justify-content: center;
+}
+.subscribe-md-body h2{
+    text-align: center;
+    color: #FF4B2F;
+    font-size: 1.2em;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    
+
+}
+.subscribe-itunes{
+    /* border-style: solid;
+    border-width: 0 1px 0 0; */
+    padding: 0 20px 10px 0;
+    margin-bottom: 10px;
+
+}
+.subscribe-sticher{
+    padding: 0 0 10px 20px;
+    margin-bottom: 10px;
+
+}
 /* Navigation CSS */
 
 
@@ -100,6 +173,81 @@ h3{
 .navbar-collapse ul li{
     text-align: center;
 }
+/* FOOTER CSS */
+.footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* margin-top: 600px; */
+    padding: 1rem;
+    background-color: #00acb7;
+}
+.footer p{
+    text-align: center;
+    font-weight: 200;
+    font-size: .9em;
+    color: #666666;
+    font-weight: 200;
+}
+.site-map{
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+}
+.site-map a{
+    color: #ffffff;
+    padding: 10px 35px;
+}
+
+/* SOCIAL MEDIA - FOLLOW CSS */
+.social-media-follows h2{
+    font-weight: 200;
+    padding: 0;
+    margin: 15px 0;
+    font-size: 2.1em;
+    /* font-variant: all-caps !important; */
+    letter-spacing: 2px !important;
+    color: #00acb7 !important;
+    text-align: center !important;
+    padding-bottom: 8px !important;
+    margin-right: 15% !important;
+    margin-left: 15%;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-bottom-color: #bdbdbd;
+}
+.social-media-icons{
+    display: flex;
+    justify-content: center;
+
+}
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* height: 100%;
+    width: 100%; */
+    opacity: 0;
+    transition: .2s ease;
+  }
+
+  .icon{
+    position: relative;
+    width: 5%;
+    margin: 3%;
+  }
+  .icon:hover .overlay {
+    opacity: 1;
+  }
 /* Podcast Main Page  */
 
 .blue-border{
