@@ -25,6 +25,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', routes);
 app.use('/admin', adminRoutes);
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log('App listening on port 3000!')
 })
