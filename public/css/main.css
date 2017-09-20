@@ -160,12 +160,18 @@ h3{
     border-color: #bdbdbd;
     padding: 0 20px 10px 0;
     margin-bottom: 10px;
-
+    width: 100%;
+}
+.subscribe-itunes img{
+    width: 90%
 }
 .subscribe-sticher{
     padding: 0 0 10px 20px;
     margin-bottom: 10px;
-
+    width: 100%;
+}
+.subscribe-sticher img{
+    width: 90%
 }
 
 /* Navigation CSS */
