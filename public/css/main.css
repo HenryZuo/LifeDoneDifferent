@@ -428,12 +428,12 @@ h3{
     border-color: #ffffff;
 }
 .card-block{
-    text-align: right;
+    /* text-align: right; */
     
 }
 
 .card-block ul{
-    list-style: none;
+    /* list-style: none; */
 }
 .card-block ul li{
     color: #666666;
@@ -444,9 +444,19 @@ h3{
     color: #ff4c2f;
     text-align: right;
 }
-#accordion h5{
+#accordion h4{
     text-align: right;
 }
+
+#accordion h5{
+    color: #00acb7;
+    font-weight: 400;
+    /* border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #DADBDB; */
+
+}
+
 .show-links ul li a{
     color: #00acb7;
 
@@ -458,7 +468,7 @@ h3{
     border-color: #00acb7;
 }
 .comment-section h2{
- color: #ff4c2f;
+ color: #FF4B2F;
 }
 .comments-made{
     padding: 0 0 30px 0;

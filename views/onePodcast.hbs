@@ -81,25 +81,27 @@
       <div id="accordion" role="tablist" aria-multiselectable="true">
         <div class="card">
           <div class="card-header" role="tab" id="headingTwo">
-            <h5 class="mb-0">
+            <h4 class="mb-0">
               <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="padding-right: 15px;">
           + Show Notes and Links
         </a>
-            </h5>
+            </h4>
           </div>
           <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
             <div class="card-block">
-              <div class="show-links col-xs-6">
+              <div class="show-notes col-xs-12 col-md-6">
                 <ul>
-                  {{#each p.showLinks}}
-                  <li><a href="http://{{this}}">{{this}}</a></li>
+                  <h5>Show Notes</h5>
+                  {{#each p.showNotes}}
+                  <li>{{this}}</li>
                   {{/each}}
                 </ul>
               </div>
-              <div class="show-notes col-xs-6">
+              <div class="show-links col-xs-12 col-md-6">
                 <ul>
-                  {{#each p.showNotes}}
-                  <li>{{this}}</li>
+                  <h5>Show Links</h5>
+                  {{#each p.showLinks}}
+                  <li><a href="http://{{this}}">{{this}}</a></li>
                   {{/each}}
                 </ul>
               </div>
