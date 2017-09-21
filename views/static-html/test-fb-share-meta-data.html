@@ -1,0 +1,24 @@
+{{#if p.guestName}}
+    <title>Life Done Different | {{p.guestName}}</title>
+    <meta property="og:title" content="Life Done Different | {{p.guestName}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.lifedonedifferent.com/podcasts/{{p._id}}" />
+    <meta property="og:image" content="{{p.imageURL}}" />
+    {{/if}}
+
+
+    {{#if pArr}}
+    <title>Life Done Different | Episodes</title>
+    <meta property="og:title" content="Life Done Different | Episodes" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.lifedonedifferent.com/podcasts" />
+    <meta property="og:image" content="https://i.imgur.com/JYA33Iu.png" />
+    {{/if}}
+
+
+     <script>
+            $('head').append(
+              '<title>Life Done Different | {{p.guestName}}</title><meta property="og:title" content="Life Done Different | {{p.guestName}}" /><meta property="og:type" content="article" /><meta property="og:url" content="http://www.lifedonedifferent.com/podcasts/{{p._id}}" /><meta property="og:image" content="{{p.imageURL}}" />'
+              )
+
+  </script>

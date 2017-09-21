@@ -19,16 +19,30 @@
                     /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
                 </style>
-    
+
+    {{#if p.guestName}}
+    <title>Life Done Different | {{p.guestName}}</title>
+    <meta property="og:title" content="Life Done Different | {{p.guestName}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.lifedonedifferent.com/podcasts/{{p._id}}" />
+    <meta property="og:image" content="{{p.imageURL}}" />
+    {{else}}
+    <title>Life Done Different</title>
+    <meta property="og:title" content="Life Done Different" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.lifedonedifferent.com/about" />
+    <meta property="og:image" content="https://i.imgur.com/JYA33Iu.png" />
+    {{/if}}
+
 
 </head>
 {{!-- <body> --}}
  <body style="padding-top: 70px"> 
-<script src="/js/jquery.min.js"></script>
+
   {{{body}}}
 
   
-
+  <script src="/js/jquery.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script src="/js/main.js"></script>
 
