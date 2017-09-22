@@ -10,7 +10,13 @@ html, body {
     margin: 0;
     /* padding-bottom: 6rem; */
     min-height: 100%;
+    overflow-x: hidden;
+      
  
+}
+.container{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
 }
 
 .full-height{
@@ -175,7 +181,10 @@ h3{
 }
 
 /* Navigation CSS */
-
+.navbar-toggle{
+    /* padding: 6px 8px !important; */
+    margin-right: 10px !important;
+}
 
 .navbar-default {
     background-color: #f8f8f8;
@@ -573,7 +582,7 @@ h3{
     background-size: auto 120%;
 }
 .about-title{
-    padding: 0 30px;
+    padding: 0 20px;
 }
 
 .about-title-line1 h1{
@@ -581,7 +590,7 @@ h3{
     padding-top:0;
     margin-bottom: 0;
     line-height: 1.4em;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color:#666666; 
     font-weight: 300;
     width: 80%;
