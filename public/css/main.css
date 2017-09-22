@@ -515,7 +515,7 @@ h3{
     font-size: 2.1em;
     /* font-variant: all-caps !important; */
     letter-spacing: 2px !important;
-    color: #ff4c2f;
+    color: #FF4B2F;
     text-align: center !important;
     padding-bottom: 8px !important;
     /* margin-right: 15% !important;
@@ -529,6 +529,7 @@ h3{
     text-align: justify;
     color: #666666;
     line-height: 1.8em;
+    padding-bottom: 8px;
 }
 .email-contact{
     display: flex;
@@ -551,7 +552,8 @@ h3{
     border-radius: 8px;
     background-color: #00acb7;
     margin-bottom: 20px;  
-     padding: 10px; 
+    padding: 10px; 
+    /* margin: 0 0 20px 20px; */
 }
 .about-card-image{
     width: 100%;
@@ -570,14 +572,18 @@ h3{
     background: #000 url("http://i.imgur.com/uAjff9y.jpg") center no-repeat;
     background-size: auto 120%;
 }
+.about-title{
+    padding: 0 30px;
+}
+
 .about-title-line1 h1{
     margin-top:0;
     padding-top:0;
     margin-bottom: 0;
     line-height: 1.4em;
-    font-size: 1.7em;
+    font-size: 1.5em;
     color:#666666; 
-    font-weight: 400;
+    font-weight: 300;
     width: 80%;
     /* background-color: pink; */
   
@@ -591,6 +597,7 @@ h3{
     text-align: justify;
     line-height: 1.8em;
     color: #666666;
+    padding-bottom: 8px;
 }
 .social-media-share{
     display: flex;
