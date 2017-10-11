@@ -328,7 +328,7 @@ h3{
      margin-top: 10px; 
     /* padding-top: 15px; */
     background-color: white;
-    width: 280px;
+    width: 100%;
     height: 40px;
     border-radius: 8px;
     z-index: 12;
@@ -359,6 +359,7 @@ h3{
     margin-top: 0;
     color: #ff4c2f;
 }
+
  .episode-card{
     border-radius: 8px;
     background-color: #00acb7;
