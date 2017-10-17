@@ -518,10 +518,10 @@ h3{
 
 /* ABOUT PAGE */
 #contact-section h2{
-    font-weight: 200;
+    font-weight: 300;
     padding: 40px 0 0 0;
     margin: 25px 0 20px 0;
-    font-size: 2.1em;
+    font-size: 2.3em;
     /* font-variant: all-caps !important; */
     letter-spacing: 2px !important;
     color: #FF4B2F;
@@ -533,7 +533,14 @@ h3{
     border-width: 2px 0 0 0;
     border-color: #00acb7;
 }
-
+#contact-section h3{
+    font-weight: 200;
+    padding: 40px 0 0 0;
+    margin: 20px 0 20px 0;
+    font-size: 1.7em;
+    color: #FF4B2F !important;
+    text-align: center !important;
+}
 #contact-section p{
     text-align: justify;
     color: #666666;
@@ -547,16 +554,33 @@ h3{
     padding: 15px 0 30px 0;
     font-size: 1.1em;
 }
+.email-contact div{
+    padding: 15px 5px;
+}
 .email-title{
     color: #ff4c2f
 }
 .email-address a{
     color: #00acb7
 }
+/* AUDIO PRODUCER CONTACT STYLING */
+.about-contact-divider{
+    width: 100%;
+    border-style: solid;
+    border-width: 1.5px 0 0 0;
+    border-color: #bdbdbd;
 
-.email-contact div{
-    padding: 15px 5px;
 }
+.audio-title{
+    color: #ff4c2f;
+    
+}
+.audio-address a{
+    color: #00acb7
+}
+/* .audio-address a:hover{
+    color: #00acb7;
+} */
 .about-card{
     border-radius: 8px;
     background-color: #00acb7;
