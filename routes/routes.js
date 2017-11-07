@@ -27,8 +27,10 @@ router.get('/podcasts', function (req, res) {
     if(err){
       res.send(err);
     } else {
+      var newPodArr = pArr.slice();
+      newPodArr.reverse();
       res.render('podcasts', {
-        pArr: pArr,
+        pArr: newPodArr,
 
       });
     }
